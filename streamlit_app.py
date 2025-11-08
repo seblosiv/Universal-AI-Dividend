@@ -1,6 +1,7 @@
 """
 🌟 Universal AI Dividend (UAD) Landing Page 🌟
 Premium Streamlit Version with Interactive Graphics
+Version: 2.0 - PREMIUM EDITION
 """
 
 import streamlit as st
