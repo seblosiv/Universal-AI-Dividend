@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 12 12 13;
+    --foreground: 251 251 249;
+
+    --card: 12 12 13;
+    --card-foreground: 251 251 249;
+
+    --popover: 28 28 30;
+    --popover-foreground: 251 251 249;
+
+    --primary: 81 248 197;
+    --primary-foreground: 12 12 13;
+
+    --secondary: 139 199 255;
+    --secondary-foreground: 12 12 13;
+
+    --muted: 58 58 60;
+    --muted-foreground: 139 199 255;
+
+    --accent: 246 198 103;
+    --accent-foreground: 12 12 13;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 251 251 249;
+
+    --border: 58 58 60;
+    --input: 58 58 60;
+    --ring: 81 248 197;
+
+    --radius: 0.75rem;
+
+    --font-space-grotesk: 'Space Grotesk', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-jet text-warm font-inter antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+
+  .gradient-mint {
+    background: linear-gradient(135deg, #51F8C5 0%, #1FF5AC 100%);
+  }
+
+  .gradient-sky {
+    background: linear-gradient(135deg, #8BC7FF 0%, #56AEFF 100%);
+  }
+
+  .gradient-radial {
+    background: radial-gradient(circle at 50% 0%, rgba(81, 248, 197, 0.15) 0%, transparent 50%);
+  }
+
+  .text-gradient-mint {
+    @apply bg-gradient-to-r from-mint to-mint-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold to-gold-600 bg-clip-text text-transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-jet;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-mint/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-mint/30;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-mint ring-offset-2 ring-offset-jet;
+}
