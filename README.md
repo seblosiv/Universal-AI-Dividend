@@ -246,14 +246,29 @@ Events tracked:
 
 ## Deployment
 
-### Vercel (Recommended)
-1. Push to GitHub
-2. Import project in Vercel
-3. Add environment variables
-4. Deploy
+> ⚠️ **Important**: This is a Next.js app and **cannot be deployed on Streamlit Cloud**. Streamlit is for Python apps only.
+
+### Vercel (Recommended) - One-Click Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/seblosiv/Universal-AI-Dividend&branch=claude/uad-landing-page-build-011CUwD2A5XZc54b8sD66kKG)
+
+**Or deploy manually**:
+
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Import your GitHub repository: `seblosiv/Universal-AI-Dividend`
+3. Select branch: `claude/uad-landing-page-build-011CUwD2A5XZc54b8sD66kKG`
+4. Framework: Next.js (auto-detected)
+5. Add environment variables (optional)
+6. Click Deploy 🚀
+
+**See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions and alternative platforms.**
 
 ### Other Platforms
-Build the production bundle:
+- **Netlify**: https://app.netlify.com/start
+- **Railway**: https://railway.app/new
+- **Render**: https://dashboard.render.com/
+
+Build the production bundle locally:
 ```bash
 npm run build
 npm start
